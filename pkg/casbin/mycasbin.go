@@ -4,7 +4,7 @@ import (
 	"github.com/casbin/casbin/v2"
 	"github.com/casbin/casbin/v2/log"
 	"github.com/casbin/casbin/v2/model"
-	gormAdapter "github.com/monitor-admin-sdk/pkg/gorm-adapter"
+	"github.com/yuanbing1113/monitor-admin-sdk/pkg/gormadapter"
 	"gorm.io/gorm"
 )
 
@@ -24,7 +24,7 @@ m = r.sub == p.sub && (keyMatch2(r.obj, p.obj) || keyMatch(r.obj, p.obj)) && (r.
 `
 
 func Setup(db *gorm.DB, _ string) *casbin.SyncedEnforcer {
-	Apter, err := gormAdapter.NewAdapterByDB(db)
+	Apter, err := gormadapter.NewAdapterByDB(db)
 	if err != nil {
 		panic(err)
 	}

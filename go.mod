@@ -16,6 +16,7 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/shamsher31/goimgext v1.0.0
 	github.com/sirupsen/logrus v1.8.1
+	github.com/stretchr/testify v1.6.1
 	github.com/yuanbing1113/monitor-admin-core v1.0.0
 	go.uber.org/zap v1.16.0
 	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83
